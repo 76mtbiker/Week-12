@@ -3,15 +3,16 @@ const DREAMS_URL = "https://64500c33b61a9f0c4d31fdad.mockapi.io/dreams";
 /*NOTE - retrieves the data from the API, then goes through each object and adds it to the table body and adds a delete button
 that, when clicked will delete the piece of data from the API itself. The function it calls is further below */
 
-    $.get(DREAMS_URL).then(data =>
-    data.map(dream => {
+    $.get(DREAMS_URL).then(data =>//uses Jquery to make HTTP GET requests to the URL defined by variable, DREAMS_URL
+    data.map(dream => { 
+      console.log (dream) //
         $("tbody").append(
             $(`
             <tr>
                 <td>${dream.id}</td>
                 <td>${dream.name}</td>
-                <td>${dream.Goal}</td>
-                <td>${dream.Dream}</td>
+                <td>${dream.goal}</td>
+                <td>${dream.dream}</td>
                 <td><button class="btn btn-danger" onclick="deleteDream(${dream.id})">Delete</button></td>
             </tr>
             `)
@@ -23,13 +24,24 @@ that, when clicked will delete the piece of data from the API itself. The functi
 When the button is clicked, it will add the value of the input that has been put in fields called below */
 
 
-$("#addGoal").on("click", () => {
-  $.post(DREAMS_URL, {
+// $("#addGoal").on("click", () => {
+//   $.post(DREAMS_URL, {
+//       name: $("#addName").val(),
+//       goal: $("#addGoal").val(),
+//       dream: $("#addDream").val(),
+    
+//   })
+// });
+
+  $("#addGoalBtn").on("click", () => {
+    $.post(DREAMS_URL, {
       name: $("#addName").val(),
       goal: $("#addGoal").val(),
       dream: $("#addDream").val(),
-  })
-});
+    });
+  });
+
+
       
 
     /*NOTE - this function takes an id as its argument and uses that id to target the specific data it wants deleted from the API */
@@ -62,5 +74,8 @@ $("#addGoal").on("click", () => {
 
       
       
-      $("#updateDream").on("click", (e) => updateDream(e))
+    document.querySelector("#updateDreams").addEventListener("click", (e) => {
+      updateDream(e);
+    });
+    
     
