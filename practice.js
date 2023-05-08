@@ -10,8 +10,8 @@ that, when clicked will delete the piece of data from the API itself. The functi
             <tr>
                 <td>${dream.id}</td>
                 <td>${dream.name}</td>
-                <td>${dream.goal}</td>
-                <td>${dream.dream}</td>
+                <td>${dream.Goal}</td>
+                <td>${dream.Dream}</td>
                 <td><button class="btn btn-danger" onclick="deleteDream(${dream.id})">Delete</button></td>
             </tr>
             `)
