@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="practice.css">
+
+</head>
+<body class="container">
+    <h1 class="header">My Dream List</h1>
+    <br>
+    <!--NOTE Used Bootstrap to put the forms into row and then into two separate columns. They will appear side by side on large screens,
+    then appear on top of one another as the screen gets smaller.-->
+    <section class="row">
+        <div class="col-sm">
+            <form class="card p-2 m-2">
+                <div>
+                    <h4 class="formHeader">Add Goal</h4>
+                </div>
+                <div>
+                    <label for="addName" class="form-label">Name</label>
+                    <input id="addName" class="form-control" type="text" placeholder="ex:Jerry Cribbins ">
+                    <br>
+                    <label for="addGoal" class="form-label">Goal</label>
+                    <input id="addGoal" class="form-control" type="text" placeholder="ex: Goals 1">
+                    <br>
+                    <label for="addDream" class="form-label">Dream</label>
+                    <input id="addDream" class="form-control" type="text" placeholder="ex: Remote Living">
+                    <br>
+                    <button id="addGoal" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="col-sm">
+            <form class="card m-2 p-2">
+                <div>
+                    <h4 class="formHeader">Update Goal</h4>
+                </div>
+                <div>
+                    <label for="updateID" class="form-label">ID</label>
+                    <input id="updateID" class="form-control" type="text" placeholder="ex: 1">
+                    <br>
+                    <label for="updateName" class="form-label">Name</label>
+                    <input id="updateName" class="form-control" type="text" placeholder="ex: Jack Johnson">
+                    <br>
+                    <label for="updateGoal" class="form-label">Goal</label>
+                    <input id="updateGoal" class="form-control" type="text" placeholder="ex: Ride trails 100 miles">
+                    <br>
+                    <label for="updateDream" class="form-label">Dream</label>
+                    <input id="updateDream" class="form-control" type="text" placeholder="ex: Making a difference">
+                    <br>
+                    <button id="updateGoal" class="btn btn-success">Update</button>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+    <br>
+
+    <!--NOTE decided to style the table with Bootstrap exclusively-->
+    <section>
+        <table class="table table-info table-striped p-2 m-2">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Goal</th>
+                <th>Dream</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="practice.js"></script>
+</body>
+</html>

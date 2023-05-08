@@ -1,0 +1,47 @@
+:root {
+    --main-color: lightblue;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.header {
+    background-color: purple;
+    border: .25rem solid yellow;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 2rem;
+    font-family: "Itim", cursive;
+    font-weight: bold;
+}
+
+.formHeader {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: "Itim", cursive;
+    font-weight: bolder;
+}
+
+.form-label {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Itim", cursive;
+    font-weight: bolder;
+}
+
+/*NOTE - designed the cards to be the same size so it looks a little less lopsided*/
+
+.card {
+    display: flex;
+    background-color: green;
+    border: 1rem solid purple;
+    height: 46rem;
+}
+
+
